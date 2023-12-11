@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+        body{
+            background-color: #17dbce;
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            max-width: 600px;
+            border: 2px solid #333;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #ebebeb;
+        }
+        input{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        input[type="submit"]{
+            margin-top: 5px;
+            background-color: #98fcf5;
+            width: 30%;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input[type="submit"]:hover{
+            background-color: #0eb6ab;
+            cursor: pointer;
+            color: #fff;
+        }
+        p{
+            margin-bottom: 5px;
+            margin-top: 5px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Details Form</h1>
+    <form action="" method="POST">
+        <p>Full Name:</p>
+        <input type="text" name="name" placeholder="Enter your Name">
+        <p>Email:</p>
+        <input type="email" name="email" placeholder="Enter your Email id">
+        <p>Designation:</p>
+        <input type="text" name="designation" placeholder="Enter your Designation">
+        <p>Salary:</p>
+        <input type="number" name="salary" placeholder="Enter your Salary">
+        <p>Date of Birth:</p>
+        <input type="date" name="dob" placeholder="Enter your Date of Birth">
+        <p>Address:</p>
+        <input type="text" name="address" placeholder="Enter your Address">
+        <p>Mobile Number:</p>
+        <input type="text" name="phone" placeholder="Enter your Mobile number">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

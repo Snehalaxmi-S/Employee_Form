@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employees list</title>
+    <style>
+        
+        body{
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #98fcf5;
+        }
+        table{
+            font-family: sans-serif;
+            border-collapse: collapse;
+            max-width: 80%;
+            border: 2px solid #333;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        th{
+            background-color: #0eb6ab;
+            color: #fff;
+        }
+        th,td{
+            padding: .8rem;
+            font-size: 14px;
+        }
+        tbody{
+            background-color: #eee;
+            color: #555;
+        }
+        /* a{
+            text-decoration: none;
+            border: 1px solid red;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: red;
+            padding: 5px;
+        } */
+
+        @media screen and (max-width:800px) {
+            thead{
+                display: none;
+            }
+
+            td{
+                display: block;
+            }
+            /* td:first-child{
+                display: none;
+            } */
+            td:nth-child(1){
+                background-color: #0eb6ab;
+                color: #fff;
+                text-align: center;
+            }
+            td:nth-child(2)::before{
+                content:"Email";
+            }
+
+            td:nth-child(3)::before{
+                content:"Designation";
+            }
+            td:nth-child(4)::before{
+                content:"Salary";
+            }
+            td:nth-child(5)::before{
+                content:"Date of Birth";
+            }
+            td:nth-child(6)::before{
+                content:"Address";
+            }
+            td:nth-child(7)::before{
+                content:"Phone";
+            }
+            
+            td{
+                text-align: right;
+            }
+            td::before{
+                float: left;
+                margin-right: 3rem;
+                font-weight: bold;
+            }
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <!-- <th>S.No</th> -->
+            <th>Name</th>
+            <th>Email</th>
+            <th>Designation</th>
+            <th>Salary</th>
+            <th>Date Of Birth</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <!-- <th>Actions</th> -->
+        </tr>
+    </thead>
+    <tbody>
+
+        <% if(employees.length>0){ %>
+
+            <% for(var i=0;i<employees.length;i++) {%>
+
+                <tr>
+                    <!-- <td><%- employees[i].id %></td> -->
+                    <td><%- employees[i].name %></td>
+                    <td><%- employees[i].email %></td>
+                    <td><%- employees[i].designation %></td>
+                    <td><%- employees[i].salary %></td>
+                    <td><%- employees[i].dob %></td>
+                    <td><%- employees[i].address %></td>
+                    <td><%- employees[i].phone %></td>
+                    <!-- <td><a href="/delete-employee?id=<%- employees[i].id %>">Delete</a></td> -->
+                </tr>
+
+            <% } %>
+
+        <% }else{ %>
+
+            <h1>Data not Found</h1>
+
+        <% } %>
+    </tbody>
+
+    </table>
+    
+</body>
+</html>
